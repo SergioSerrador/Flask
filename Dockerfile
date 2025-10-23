@@ -1,10 +1,10 @@
 FROM python:3.14.0-alpine3.22
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
-COPY src ./src
+COPY . .
 EXPOSE 5000
-RUN useradd app
+RUN adduser -D app
 USER app
 
 
