@@ -6,6 +6,4 @@ COPY . .
 EXPOSE 5000
 RUN adduser -D app
 USER app
-
-
 CMD ["python", "app.py"]
